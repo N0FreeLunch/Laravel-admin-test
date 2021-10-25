@@ -60,7 +60,23 @@ php artisan serve
 ```
 touch database/database.sqlite
 ```
-
+```
+php artisan migrate
 ```
 
+## connect to database
+```
+sqlite3 ./database/database.sqlite
+```
+
+### git ignore setting
+- add this
+```
+/database/database.sqlite
+/public/vendor
+```
+
+### make model
+```
+php artisan admin:make UserController --model=App\\Models\\User
 ```
