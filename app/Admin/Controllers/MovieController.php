@@ -8,6 +8,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use Encore\Admin\Facades\Admin;
+use DateTime;
 
 class MovieController extends AdminController
 {
@@ -116,15 +117,15 @@ class MovieController extends AdminController
       $form->number('rate', 'Rate');
 
       // Add a switch field
-      $form->switch('released', 'Released?');
+      $form->switch('released', 'Released');
 
       // Add a date and time selection box
-      $form->dateTime('release_at', 'release time');
+      $form->datetime('release_at', 'release time');
 
       // Display two time column
       $form->display('created_at', 'Created time');
       $form->display('updated_at', 'Updated time');
 
-        return $form;
+      return $form;
     }
 }

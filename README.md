@@ -32,7 +32,7 @@ php artisan migrate
 ## install laravel-admin
 ### install laravel admin package
 ```
-composer require encore/laravel-admin
+composer require encore/laravel-admin "^1.5"
 ```
 
 ###  laravel admin schefolding
