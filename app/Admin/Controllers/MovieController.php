@@ -3,12 +3,12 @@
 namespace App\Admin\Controllers;
 
 use App\Models\Movie;
+use App\Models\User;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use Encore\Admin\Facades\Admin;
-use DateTime;
 
 class MovieController extends AdminController
 {
@@ -107,6 +107,12 @@ class MovieController extends AdminController
           'Smith' => 2,
           'Kate'  => 3,
       ];
+
+      // $directors = [
+      //     'John',
+      //     'Smith',
+      //     'Kate',
+      // ];
 
       $form->select('director', 'Director')->options($directors);
 
