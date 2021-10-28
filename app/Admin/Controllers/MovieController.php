@@ -102,17 +102,17 @@ class MovieController extends AdminController
       // Add an input box of type text
       $form->text('title', 'Movie title');
 
-      $directors = [
-          'John'  => 1,
-          'Smith' => 2,
-          'Kate'  => 3,
-      ];
-
       // $directors = [
-      //     'John',
-      //     'Smith',
-      //     'Kate',
+      //     'John'  => 1,
+      //     'Smith' => 2,
+      //     'Kate'  => 3,
       // ];
+
+      $directors = [
+          1 => 'John',
+          2 => 'Smith',
+          3 => 'Kate',
+      ];
 
       $form->select('director', 'Director')->options($directors);
 
@@ -131,6 +131,21 @@ class MovieController extends AdminController
       // Display two time column
       $form->display('created_at', 'Created time');
       $form->display('updated_at', 'Updated time');
+
+      // $form->tools(function (Form\Tools $tools) {
+      //
+      //     // Disable `List` btn.
+      //     $tools->disableList();
+      //
+      //     // Disable `Delete` btn.
+      //     $tools->disableDelete();
+      //
+      //     // Disable `Veiw` btn.
+      //     $tools->disableView();
+      //
+      //     // Add a button, the argument can be a string, or an instance of the object that implements the Renderable or Htmlable interface
+      //     $tools->add('<a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>&nbsp;&nbsp;delete</a>');
+      // });
 
       return $form;
     }
